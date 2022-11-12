@@ -5,6 +5,8 @@
  */
 package gui;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author User
@@ -151,6 +153,11 @@ public class PertambahanDuaAngkaGUI extends javax.swing.JFrame {
         });
 
         keluarBtn.setText("KELUAR");
+        keluarBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                keluarBtnActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -206,14 +213,14 @@ public class PertambahanDuaAngkaGUI extends javax.swing.JFrame {
         // TODO add your handling code here:
         if (angkaPertamaTF.getText().equals("") || angkaKeduaTF.getText().equals("")){
             //kasih pesan input tidak boleh kosong
-            JOptionPane.showMessageDialog(null, "input tidak boleh kosong");
+            
         } else {
             int angkaPertama = Integer.valueOf(angkaPertamaTF.getText());
             int angkaKedua  = Integer.parseInt(angkaKeduaTF.getText());
             int hasil   = angkaPertama + angkaKedua;
-            hasilTF.setText(Integer.toString(hasil));
-            
+            hasilTF.setText(Integer.toString(hasil));           
         }
+        JOptionPane.showMessageDialog(null, "input tidak boleh kosong");
     }//GEN-LAST:event_hitungBtnActionPerformed
 
     private void hapusBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hapusBtnActionPerformed
@@ -224,6 +231,12 @@ public class PertambahanDuaAngkaGUI extends javax.swing.JFrame {
         
         angkaPertamaTF.requestFocus();
     }//GEN-LAST:event_hapusBtnActionPerformed
+
+    private void keluarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_keluarBtnActionPerformed
+        // TODO add your handling code here:
+        System.exit(0);
+        
+    }//GEN-LAST:event_keluarBtnActionPerformed
 
     /**
      * @param args the command line arguments
