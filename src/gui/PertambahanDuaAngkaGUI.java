@@ -213,14 +213,14 @@ public class PertambahanDuaAngkaGUI extends javax.swing.JFrame {
         // TODO add your handling code here:
         if (angkaPertamaTF.getText().equals("") || angkaKeduaTF.getText().equals("")){
             //kasih pesan input tidak boleh kosong
-            
+           JOptionPane.showMessageDialog(null, "input tidak boleh kosong"); 
         } else {
             int angkaPertama = Integer.valueOf(angkaPertamaTF.getText());
             int angkaKedua  = Integer.parseInt(angkaKeduaTF.getText());
             int hasil   = angkaPertama + angkaKedua;
             hasilTF.setText(Integer.toString(hasil));           
         }
-        JOptionPane.showMessageDialog(null, "input tidak boleh kosong");
+        
     }//GEN-LAST:event_hitungBtnActionPerformed
 
     private void hapusBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hapusBtnActionPerformed
